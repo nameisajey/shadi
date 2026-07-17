@@ -404,6 +404,10 @@
 document.getElementById('sealBtn').addEventListener('click', function(){
   document.getElementById('envelopeScreen').classList.add('opened');
   document.body.style.overflow = 'auto';
+
+  const audio = document.getElementById('bgAudio');
+  const icon = document.getElementById('audioIcon');
+  audio.play().then(()=>{ icon.textContent = '❚❚'; }).catch(()=>{});
 });
 
 /* ---------------- Falling petals canvas ---------------- */
